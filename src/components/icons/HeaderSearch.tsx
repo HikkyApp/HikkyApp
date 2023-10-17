@@ -1,19 +1,18 @@
 import React from 'react'
 import Link from 'next/link'
 import { IoIosSearch } from 'react-icons/io'
-import { useSetAtom } from 'jotai'
-import { showSearchModalAtom } from '~/store'
+
 type Props = {}
 
 const HeaderSearch = (props: Props) => {
-    const setShowSearchModal = useSetAtom(showSearchModalAtom)
-    const handleShowSearchModal = () => {
-        setShowSearchModal(true)
-    }
+    // const setShowSearchModal = useSetAtom(showSearchModalAtom)
+    // const handleShowSearchModal = () => {
+    //     setShowSearchModal(true)
+    // }
 
     return (
         <div
-            onClick={handleShowSearchModal}
+            onClick={() => true}
             className='flex max-h-[35px]  w-fit items-center justify-between rounded-2xl bg-gray-800 lg:w-[68%]'>
             <input
                 readOnly

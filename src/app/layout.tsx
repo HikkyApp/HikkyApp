@@ -2,8 +2,8 @@ import React from 'react';
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic';
 import { Inter } from 'next/font/google'
+import "./globals.css"
 
-const inter = Inter({ subsets: ['latin'] })
 
 interface BaseLayoutProps {
   showHeader?: boolean;
@@ -26,20 +26,18 @@ export default function RootLayout({
 }: BaseLayoutProps) {
   return (
     <React.Fragment>
-      <html lang="en">
-        <body className={inter.className}>
 
-          {showHeader && <Header />}
-          {/* <SeachModal /> */}
-          <main className='text-white'>
-            {children}
-          </main>
-          {showFooter && <Footer />}
+      <body>
 
+        {showHeader && <Header />}
+        {/* <SeachModal /> */}
+        <main className='text-white'>
+          {children}
+        </main>
+        {showFooter && <Footer />}
 
+      </body>
 
-        </body>
-      </html>
     </React.Fragment>
   )
 }

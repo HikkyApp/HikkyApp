@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react'
 import { HamburgerMenu } from '@/components/icons';
 import { IoIosArrowDown } from 'react-icons/io'
@@ -27,7 +28,7 @@ const Header = () => {
                     <div className="flex items-center ">
                         <HamburgerMenu />
                         <Link href='/' className="font-semibold opacity-80 text-3xl cursor-pointer transform hover:scale-105 transition duration-300 ">
-                            HikkyManga
+                            HikkyApp
                         </Link>
 
                     </div>
@@ -37,7 +38,7 @@ const Header = () => {
                             <li
                                 onMouseEnter={() => { setIsOpenGenre(true) }}
                                 onMouseLeave={() => { setIsOpenGenre(false) }}
-                                className="cursor-pointer relative  transform transition duration-300 ">
+                                className="cursor-pointer relative  transform transition duration-300 z-100 ">
                                 <div className={`flex gap-1 opacity-80 items-center text-2xl uppercase font-bold ${isOpenGenre ? 'text-highlight' : null}`}>
                                     Thể loại <IoIosArrowDown className="w-6 h-6 font-bold" />
                                 </div>
@@ -52,7 +53,7 @@ const Header = () => {
                                 </div>
                                 <DropDown options={RANKING_COMICS} show={isOpenRanking} isMore={false} />
                             </li>
-                            <NavItem label="Truyện mới" />
+                            <NavItem label="Xem phim cùng bạn bè" />
                             <NavItem label="Ủng hộ" />
                             <NavItem label="Tin Tức" />
                         </ul>
