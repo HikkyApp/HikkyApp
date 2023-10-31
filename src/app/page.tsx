@@ -7,11 +7,9 @@ const Home = () => {
         <React.Fragment>
             <div className="relative ">
 
-
+                
             </div>
-
         </React.Fragment >
     )
 }
-
 export default Home;

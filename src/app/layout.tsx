@@ -1,9 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic';
-import { Inter } from 'next/font/google'
 import "./globals.css"
-
 
 interface BaseLayoutProps {
   showHeader?: boolean;
@@ -26,17 +24,16 @@ export default function RootLayout({
 }: BaseLayoutProps) {
   return (
     <React.Fragment>
-
-      <body>
-
-        {showHeader && <Header />}
-        {/* <SeachModal /> */}
-        <main className='text-white'>
-          {children}
-        </main>
-        {showFooter && <Footer />}
-
-      </body>
+      <html lang="en" suppressHydrationWarning={true}>
+        <body >
+          {showHeader && <Header />}
+          {/* <SeachModal /> */}
+          <main className='text-white'>
+            {children}
+          </main>
+          {showFooter && <Footer />}
+        </body>
+      </html>
 
     </React.Fragment>
   )
