@@ -27,10 +27,9 @@ const Header = () => {
                     <div className='absolute inset-0 '> </div>
                     <div className="flex items-center ">
                         <HamburgerMenu />
-                        <Link href='/' className="font-semibold opacity-80 text-3xl cursor-pointer transform hover:scale-105 transition duration-300 ">
+                        <Link href='/' className="font-semibold opacity-80 text-3xl cursor-pointer transform  transition duration-300 ">
                             HikkyApp
                         </Link>
-
                     </div>
 
                     <nav className=" hidden md:block">

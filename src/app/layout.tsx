@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 
 const Header = dynamic(() => import('@/components/partials/Header'));
 const Footer = dynamic(() => import('@/components/partials/Footer'));
+const SeachModal = dynamic(() => import('@/components/shared/SearchModal'));
 
 export default function RootLayout({
   children,
@@ -27,7 +28,7 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning={true}>
         <body >
           {showHeader && <Header />}
-          {/* <SeachModal /> */}
+          <SeachModal />
           <main className='text-white'>
             {children}
           </main>
