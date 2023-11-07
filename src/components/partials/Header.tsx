@@ -5,7 +5,7 @@ import { IoIosArrowDown } from 'react-icons/io'
 import { GENRES_COMICS, RANKING_COMICS } from '@/constants';
 import DropDown from '@/components/shared/DropDown';
 import { HeaderSearch, HeaderUser } from '@/components/icons';
-import Link from 'next/link'
+import Link from 'next/link';
 type NavItemProps = {
     label: string,
 
@@ -60,6 +60,7 @@ const Header = () => {
 
                     <div className="flex gap-3 z-30 ">
                         <HeaderSearch />
+
                         <HeaderUser />
                     </div>
                 </div>
